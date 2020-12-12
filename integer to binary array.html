@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Untitled Document</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/brain/0.6.3/brain.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.33.1/plotly.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head>
+
+	<body>
+
+	  
+
+		<script>
+		
+		
+		
+
+		function I2BA(digits,number)
+		{
+			var zeros="";
+			for(i = 0; i < digits;i++)
+			{
+				zeros += "0";
+			}
+			return (zeros + number.toString(2)).slice(-digits).split('').map(function(s) { return parseInt(s); });
+		}
+		
+		function BA2I(number)
+		{
+			return parseInt(number.join(''),2);
+		}
+		
+		
+		console.log(I2BA(10,750));
+			
+		console.log((BA2I(I2BA(10,1000))));
+
+		</script>
+
+	</body>
+</html>
